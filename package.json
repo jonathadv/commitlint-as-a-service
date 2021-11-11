@@ -2,8 +2,9 @@
   "name": "lint-as-a-service",
   "version": "1.0.0",
   "description": "commitlint served via HTTP",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jonatha Daguerre",
@@ -16,5 +17,8 @@
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
