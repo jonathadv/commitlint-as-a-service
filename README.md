@@ -1,6 +1,6 @@
-# lint-as-a-service
+# commitlint-as-a-service
 
-use commitlint over http
+use commitlint as a http service 
 
 
 ## Project setup
@@ -18,7 +18,7 @@ or
 `GET /?msg=<commit message>`
 
 ```bash
-$ curl -G https://lint-as-a-service.herokuapp.com/ --data-urlencode "msg=feat: test" | jq
+$ curl -G https://commitlint-as-a-service.herokuapp.com/ --data-urlencode "msg=feat: test" | jq
 
 {
   "valid": true,
@@ -30,7 +30,7 @@ $ curl -G https://lint-as-a-service.herokuapp.com/ --data-urlencode "msg=feat: t
 
 
 ```bash
-$ curl -G https://lint-as-a-service.herokuapp.com/ --data-urlencode "msg=FeaT: test" | jq
+$ curl -G https://commitlint-as-a-service.herokuapp.com/ --data-urlencode "msg=FeaT: test" | jq
 
 {
   "valid": false,
@@ -58,14 +58,14 @@ $ curl -G https://lint-as-a-service.herokuapp.com/ --data-urlencode "msg=FeaT: t
 `GET /txt?msg=<commit message>`
 
 ```bash
-$ curl -G https://lint-as-a-service.herokuapp.com/txt --data-urlencode "msg=feat: test"
+$ curl -G https://commitlint-as-a-service.herokuapp.com/txt --data-urlencode "msg=feat: test"
 
 # <no response body for right messages>
 
 ```
 
 ```bash
-$ curl -G https://lint-as-a-service.herokuapp.com/txt --data-urlencode "msg=FeaT: test"
+$ curl -G https://commitlint-as-a-service.herokuapp.com/txt --data-urlencode "msg=FeaT: test"
 
 ⧗   input: FeaT: test
 ✖   type must be lower-case [type-case]
