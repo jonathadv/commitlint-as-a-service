@@ -1,0 +1,20 @@
+{
+  "name": "lint-as-a-service",
+  "version": "1.0.0",
+  "description": "commitlint served via HTTP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonatha Daguerre",
+  "license": "MIT",
+  "dependencies": {
+    "@commitlint/format": "^14.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0"
+  }
+}
