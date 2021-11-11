@@ -18,7 +18,7 @@ or
 `GET /?msg=<commit message>`
 
 ```bash
-$ curl -G http://localhost:3333/ --data-urlencode "msg=feat: test" | jq
+$ curl -G https://lint-as-a-service.herokuapp.com/ --data-urlencode "msg=feat: test" | jq
 
 {
   "valid": true,
@@ -30,7 +30,7 @@ $ curl -G http://localhost:3333/ --data-urlencode "msg=feat: test" | jq
 
 
 ```bash
-$ curl -G http://localhost:3333/ --data-urlencode "msg=FeaT: test" | jq
+$ curl -G https://lint-as-a-service.herokuapp.com/ --data-urlencode "msg=FeaT: test" | jq
 
 {
   "valid": false,
@@ -58,14 +58,14 @@ $ curl -G http://localhost:3333/ --data-urlencode "msg=FeaT: test" | jq
 `GET /txt?msg=<commit message>`
 
 ```bash
-$ curl -G http://localhost:3333/txt --data-urlencode "msg=feat: test"
+$ curl -G https://lint-as-a-service.herokuapp.com/txt --data-urlencode "msg=feat: test"
 
 # <no response body for right messages>
 
 ```
 
 ```bash
-$ curl -G http://localhost:3333/txt --data-urlencode "msg=FeaT: test"
+$ curl -G https://lint-as-a-service.herokuapp.com/txt --data-urlencode "msg=FeaT: test"
 
 ⧗   input: FeaT: test
 ✖   type must be lower-case [type-case]
