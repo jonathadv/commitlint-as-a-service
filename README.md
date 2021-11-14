@@ -1,6 +1,8 @@
 # commitlint-as-a-service
 
-use commitlint as a http service
+Use [commitlint](https://github.com/conventional-changelog/commitlint) with [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional) rules as a http service.
+
+
 
 ## Project setup
 
