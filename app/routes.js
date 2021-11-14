@@ -1,7 +1,16 @@
-const controllers = require('./controllers');
+const controllers = require("./controllers");
+const middlewares = require("./middlewares");
 
 module.exports = (app) => {
-    app.post('/', controllers.post);    
-    app.get('/', controllers.getJson);
-    app.get('/txt', controllers.getTxt);
- }
+  app.get("/", middlewares.logging, controllers.getHomePage);
+  app.get(
+    "/json",
+    [middlewares.logging, middlewares.requestValidation],
+    controllers.getJsonFormat
+  );
+  app.get(
+    "/text",
+    [middlewares.logging, middlewares.requestValidation],
+    controllers.getTextFormat
+  );
+};

@@ -5,20 +5,23 @@
   "main": "app/index.js",
   "scripts": {
     "start": "node app",
+    "format": "npx prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jonatha Daguerre",
   "license": "MIT",
   "dependencies": {
-    "@commitlint/lint": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
     "@commitlint/format": "^14.1.0",
+    "@commitlint/lint": "^14.1.0",
     "@commitlint/load": "^14.1.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^14.1.0"
+    "@commitlint/cli": "^14.1.0",
+    "prettier": "^2.4.1"
   },
   "engines": {
     "node": "14.x"

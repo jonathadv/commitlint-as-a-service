@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>commitlint-as-a-service</title>
+  </head>
+  <body>
+    <h1>commitlint-as-a-service</h1>
+
+    <div>
+      <h2>Good message</h2>
+      <p>
+        <span>JSON: </span
+        ><a id="good-json-msg" href="/json?msg=chore:%20sample%20message"
+          >/json?msg=chore: sample message</a
+        >
+      </p>
+      <p>
+        <span>TEXT: </span
+        ><a id="good-text-msg" href="/text?msg=chore:%20sample%20message"
+          >/text?msg=chore: sample message</a
+        >
+      </p>
+    </div>
+
+    <div>
+      <h2>Bad message</h2>
+      <p>
+        <span>JSON: </span
+        ><a id="bad-json-msg" href="/json?msg=ChoRe:%20sample%20message"
+          >/json?msg=ChoRe: sample message</a
+        >
+      </p>
+      <p>
+        <span>TEXT: </span
+        ><a id="bad-text-msg" href="/text?msg=ChoRe:%20sample%20message"
+          >/text?msg=ChoRe: sample message</a
+        >
+      </p>
+    </div>
+
+    <div>
+      <a href="https://github.com/jonathadv/commitlint-as-a-service">Github</a>
+    </div>
+  </body>
+</html>

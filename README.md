@@ -1,12 +1,13 @@
 # commitlint-as-a-service
 
-use commitlint as a http service 
-
+use commitlint as a http service
 
 ## Project setup
+
 `npm install`
 
 ## Run server
+
 `$ node app`
 
 or
@@ -18,7 +19,7 @@ or
 `GET /?msg=<commit message>`
 
 ```bash
-$ curl -G https://commitlint-as-a-service.herokuapp.com/ --data-urlencode "msg=feat: test" | jq
+$ curl -G http://localhost:3333/json --data-urlencode "msg=feat: test" | jq
 
 {
   "valid": true,
@@ -28,9 +29,8 @@ $ curl -G https://commitlint-as-a-service.herokuapp.com/ --data-urlencode "msg=f
 }
 ```
 
-
 ```bash
-$ curl -G https://commitlint-as-a-service.herokuapp.com/ --data-urlencode "msg=FeaT: test" | jq
+$ curl -G http://localhost:3333/json --data-urlencode "msg=FeaT: test" | jq
 
 {
   "valid": false,
@@ -58,14 +58,14 @@ $ curl -G https://commitlint-as-a-service.herokuapp.com/ --data-urlencode "msg=F
 `GET /txt?msg=<commit message>`
 
 ```bash
-$ curl -G https://commitlint-as-a-service.herokuapp.com/txt --data-urlencode "msg=feat: test"
+$ curl -G http://localhost:3333/text --data-urlencode "msg=feat: test"
 
-# <no response body for right messages>
+ok
 
 ```
 
 ```bash
-$ curl -G https://commitlint-as-a-service.herokuapp.com/txt --data-urlencode "msg=FeaT: test"
+$ curl -G http://localhost:3333/text --data-urlencode "msg=FeaT: test"
 
 ⧗   input: FeaT: test
 ✖   type must be lower-case [type-case]
